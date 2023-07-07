@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Chat with the bot</h1>
+    <form method="POST">
+        <label for="message">Your Message:</label><br>
+        <input type="text" id="message" name="message"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% for exchange in chat_history %}
+        <p><b>You:</b> {{ exchange.user }}</p>
+        <p><b>Bot:</b> {{ exchange.bot }}</p>
+    {% endfor %}
+</body>
+</html>
